@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Project Management System</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 <div class="container">
@@ -29,7 +30,7 @@
           <div class="forgot_password"><a href="#">Forgot Password?</a></div>
           <button class="login_button" type="submit">Login</button>
           <div class="signup_link">
-            <a href="register.html">Don't have an account?</a>
+            <a href="register.php">Don't have an account?</a>
           </div>
         </form>
       </div>

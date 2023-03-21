@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register | Project Management System</title>
+    <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
 <div class="container">
@@ -34,7 +35,7 @@
           <button class="signup_button" type="submit">Create Account</button>
 
           <div class="login_link">
-            Already have an account? <a href="login.html">Log in</a>
+            Already have an account? <a href="login.php">Log in</a>
           </div>
         </form>
       </div>

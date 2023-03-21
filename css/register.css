@@ -1,0 +1,95 @@
+.container {
+    background-color: #f6f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;
+  }
+  
+  h2 {
+    color: #333333;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input_box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  label {
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .input_box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 20px;
+    color: #333333;
+  }
+  
+  .password_checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .signup_button {
+    background-color: #1a6dfb;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .signup_button:hover {
+    background-color: #0d129b;
+    cursor: pointer;
+  }
+  
+  .login_link {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .login_link a {
+    color: #1a6dfb;
+    font-weight: bold;
+  }
+  
