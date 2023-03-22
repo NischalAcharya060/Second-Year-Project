@@ -1,51 +1,58 @@
 <?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Project Management System</title>
-    <link rel="stylesheet" href="css/login.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Project-Management-System</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 </head>
+
 <body>
-<div class="container">
-      <div class="box">
-        <h2>Login</h2>
-        <form action="login.php" method="post">
-          <div class="input_box">
-            <label>Username</label>
-            <input type="text" class="name" required />
-          </div>
-		  <div class="input_box">
-            <label>Password</label>
-            <input type="password" class="password" required />
+  <div class="header">
+    <h2>Login</h2>
+  </div>
 
-            <div class="password_checkbox">
-              <input type="checkbox" id="show_password" />
-              <label for="show_password">Show Password</label>
-            </div>
-          </div>
-
-          <div class="forgot_password"><a href="#">Forgot Password?</a></div>
-          <button class="login_button" type="submit">Login</button>
-          <div class="signup_link">
-            <a href="register.php">Don't have an account?</a>
-          </div>
-        </form>
-      </div>
+  <form method="post" action="login.php">
+    <?php include('errors.php'); ?>
+    <div class="input-group">
+      <label>Username:</label>
+      <input type="text" name="username" required>
     </div>
-    <script>
-      const passwordInput = document.querySelector(".password");
-      const showPasswordCheckbox = document.querySelector("#show_password");
+    <div class="input-group">
+      <label>Password:</label>
+      <input type="password" name="password" id="password" required>
+      <i class="bi bi-eye-slash" id="togglePassword"></i>
+    </div>
+    <div class="input-group">
+      <button type="submit" class="btn" name="login_user">Login</button>
+    </div>
+    <p>
+      Not yet a member? <a href="register.php">Sign up</a>
+    </p>
+  </form>
+  <script>
+    const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#password");
 
-      showPasswordCheckbox.addEventListener("change", function () {
-        if (this.checked) {
-          passwordInput.type = "text";
-        } else {
-          passwordInput.type = "password";
-        }
-      });
-    </script>
+    togglePassword.addEventListener("click", function() {
+      // toggle the type attribute
+      const type = password.getAttribute("type") === "password" ? "text" : "password";
+      password.setAttribute("type", type);
+
+      // toggle the icon
+      this.classList.toggle("bi-eye");
+    });
+
+    // prevent form submit
+    const form = document.querySelector("form");
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+    });
+  </script>
 </body>
+
 </html>
