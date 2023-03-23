@@ -63,19 +63,8 @@ input[type="password"] {
   border-radius: 7px;
 }
 .btn:hover {
-  background-color: #7ebdc2;
+  background-color: #11575c;
   cursor: pointer;
-}
-.show-btn {
-  background-color: blue;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
 }
 .error {
   width: 92%;

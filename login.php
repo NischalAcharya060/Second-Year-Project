@@ -34,7 +34,7 @@
       Not yet a member? <a href="register.php">Sign up</a>
     </p>
   </form>
-  <script>
+  <!-- <script>
     const togglePassword = document.querySelector("#togglePassword");
     const password = document.querySelector("#password");
 
@@ -52,7 +52,7 @@
     form.addEventListener('submit', function(e) {
       e.preventDefault();
     });
-  </script>
+  </script> -->
 </body>
 
 </html>

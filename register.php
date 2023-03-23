@@ -9,6 +9,7 @@
   <title>Register | Project-Management-System</title>
   <link rel="stylesheet" href="css/register.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  
 </head>
 
 <body>
@@ -16,7 +17,7 @@
     <h2>Register</h2>
   </div>
 
-  <form method="post" action="register.php">
+  <form method="post" action="#">
     <?php include('errors.php'); ?>
     <div class="input-group">
       <label>Username:</label>
@@ -43,7 +44,7 @@
       Already a member? <a href="login.php">Sign in</a>
     </p>
   </form>
-  <script>
+  <!-- <script>
     const togglePassword1 = document.querySelector("#togglePassword1");
     const password1 = document.querySelector("#password1");
 
@@ -68,8 +69,8 @@
     form.addEventListener('submit', function(e) {
       e.preventDefault();
     });
-  </script>
-
+  </script> -->
+ 
 </body>
 
 </html>
