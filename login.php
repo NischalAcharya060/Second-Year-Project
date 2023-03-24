@@ -20,11 +20,11 @@
     <?php include('errors.php'); ?>
     <div class="input-group">
       <label>Username:</label>
-      <input type="text" name="username" required>
+      <input type="text" name="username" placeholder="enter your username" required>
     </div>
     <div class="input-group">
       <label>Password:</label>
-      <input type="password" name="password" id="password" required>
+      <input type="password" name="password" placeholder="enter your password" id="password" required>
       <i class="bi bi-eye-slash" id="togglePassword"></i>
     </div>
     <div class="input-group">

@@ -21,20 +21,20 @@
     <?php include('errors.php'); ?>
     <div class="input-group">
       <label>Username:</label>
-      <input type="text" name="username" value="<?php echo $username; ?>" required>
+      <input type="text" name="username" placeholder="enter your username" value="<?php echo $username; ?>" required>
     </div>
     <div class="input-group">
       <label>Email:</label>
-      <input type="email" name="email" value="<?php echo $email; ?>" required>
+      <input type="email" name="email" placeholder="enter your email" value="<?php echo $email; ?>" required>
     </div>
     <div class="input-group">
       <label>Password:</label>
-      <input type="password" name="password_1" id="password1" required>
+      <input type="password" name="password_1" placeholder="enter your password" id="password1" required>
       <i class="bi bi-eye-slash" id="togglePassword1"></i>
     </div>
     <div class="input-group">
       <label>Confirm password:</label>
-      <input type="password" name="password_2" id="password2" required>
+      <input type="password" name="password_2" placeholder="re-enter your password" id="password2" required>
       <i class="bi bi-eye-slash" id="togglePassword2"></i>
     </div>
     <div class="input-group">

@@ -4,20 +4,20 @@
 }
 body {
   font-size: 120%;
-  background-color: #f0f8ff;
+  background-color: #b3daff;
   font-family: "Poppins", sans-serif;
 }
 .header {
   width: 30%;
   margin: 50px auto 0px;
   color: white;
-  background: #5f9ea0;
+  background: #a10fea;
   text-align: center;
-  border: 1px solid #b0c4de;
+  border: 1px solid #7d22aa;
   border-bottom: none;
   border-radius: 10px 10px 0px 0px;
   padding: 20px;
-  box-shadow: 0px 3px 3px #888888;
+  box-shadow: 0px 3px 3px #730aa8;
 }
 form,
 .content {
@@ -58,12 +58,12 @@ input[type="password"] {
   padding: 10px;
   font-size: 15px;
   color: white;
-  background: #5f9ea0;
+  background: #a10fea;
   border: none;
   border-radius: 7px;
 }
 .btn:hover {
-  background-color: #7ebdc2;
+  background-color: #600b8a;
   cursor: pointer;
 }
 .error {
