@@ -45,30 +45,25 @@
     </p>
   </form>
   <!-- <script>
-    const togglePassword1 = document.querySelector("#togglePassword1");
-    const password1 = document.querySelector("#password1");
+    const togglePassword = (toggleId, passwordId) => {
+  const togglePassword = document.querySelector(toggleId);
+  const password = document.querySelector(passwordId);
 
-    togglePassword1.addEventListener("click", function() {
-      const type = password1.getAttribute("type") === "password" ? "text" : "password";
-      password1.setAttribute("type", type);
+  togglePassword.addEventListener("click", function() {
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
 
-      this.classList.toggle("bi-eye");
-    });
+    this.classList.toggle("bi-eye");
+  });
+};
 
-    const togglePassword2 = document.querySelector("#togglePassword2");
-    const password2 = document.querySelector("#password2");
+togglePassword('#togglePassword1', '#password1');
+togglePassword('#togglePassword2', '#password2');
 
-    togglePassword2.addEventListener("click", function() {
-      const type = password2.getAttribute("type") === "password" ? "text" : "password";
-      password2.setAttribute("type", type);
-
-      this.classList.toggle("bi-eye");
-    });
-
-    const form = document.querySelector("form");
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-    });
+const form = document.querySelector("form");
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+});
   </script> -->
  
 </body>

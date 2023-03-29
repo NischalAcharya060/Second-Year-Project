@@ -29,6 +29,8 @@ li {
   --light-yellow: #fff2c6;
   --orange: #fd7238;
   --light-orange: #ffe0d3;
+  --txt: #fff;
+  --txt2: #333;
 }
 
 html {
@@ -39,6 +41,8 @@ body.dark {
   --light: #16163d;
   --grey: #121541;
   --dark: #fbfbfb;
+  --txt: #f40b0b;
+  --txt2: #fff;
 }
 
 body {
@@ -157,7 +161,6 @@ body {
   display: flex;
   justify-content: center;
 }
-/* SIDEBAR */
 
 /* CONTENT */
 #content {
@@ -293,7 +296,6 @@ body {
 #content nav #switch-mode:checked + .switch-mode::before {
   left: calc(100% - (25px - 4px) - 2px);
 }
-/* NAVBAR */
 
 /* MAIN */
 #content main {
@@ -496,7 +498,22 @@ body {
 #content main .table-data .todo .todo-list li:last-child {
   margin-bottom: 0;
 }
-/* MAIN */
+.btn{
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e012f7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover{
+  background-color: #c90bf4;
+}
 /* CONTENT */
 
 @media screen and (max-width: 768px) {

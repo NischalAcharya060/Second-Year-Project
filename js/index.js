@@ -74,3 +74,13 @@ switchMode.addEventListener('change', function () {
 		document.body.classList.remove('dark');
 	}
 })
+
+const profileLink = document.querySelector('.profile');
+const profileContainer = document.querySelector('#profile-container');
+
+profileLink.addEventListener('click', (event) => {
+  event.preventDefault();
+  profileContainer.style.display = 'block';
+});
+
+
