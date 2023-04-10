@@ -26,7 +26,6 @@ if (isset($_GET['logout'])) {
   </link>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css" integrity="sha512-jcAER9aR7UnlZruH34dLRSaFQQBWLcp7PVuMBWTCsV7iCnY9ARvWeT8fWPH1Qb/YkMaZf6UcaD6U7z6UfME2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-FizJO+HnNYD8rNwfvGvGeYIWLyfNjMNskow29pP9Rl7kAaq1mHdDZYIgFmBv7JYbPktmV7TUbTDP9oA7jNU0ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 </head>
 
 <body>
@@ -38,13 +37,13 @@ if (isset($_GET['logout'])) {
     </a>
     <ul class="side-menu top">
       <li class="active">
-        <a href="#">
+        <a href="index.php">
           <i class="bx bxs-dashboard"></i>
           <span class="text">Dashboard</span>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="project.php">
           <i class="bx bxs-shopping-bag-alt"></i>
           <span class="text">Projects</span>
         </a>
@@ -128,10 +127,6 @@ if (isset($_GET['logout'])) {
             </li>
           </ul>
         </div>
-        <!-- <a href="#" class="btn-download">
-            <i class="bx bxs-cloud-download"></i>
-            <span class="text">Download PDF</span>
-          </a> -->
       </div>
 
       <ul class="box-info">
