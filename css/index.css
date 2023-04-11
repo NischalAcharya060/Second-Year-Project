@@ -142,6 +142,7 @@ body {
   color: var(--dark);
   white-space: nowrap;
   overflow-x: hidden;
+  text-decoration: none;
 }
 #sidebar .side-menu.top li.active a {
   color: var(--blue);
@@ -155,6 +156,7 @@ body {
 }
 #sidebar .side-menu.top li a:hover {
   color: var(--blue);
+  text-decoration: none;
 }
 #sidebar .side-menu li a .bx {
   min-width: calc(60px - ((4px + 6px) * 2));
@@ -498,7 +500,7 @@ body {
 #content main .table-data .todo .todo-list li:last-child {
   margin-bottom: 0;
 }
-.btn{
+.btn {
   display: inline-block;
   padding: 8px 16px;
   background-color: #e012f7;
@@ -511,7 +513,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.btn:hover{
+.btn:hover {
   background-color: #c90bf4;
 }
 /* CONTENT */

@@ -21,4 +21,3 @@ if ($result) {
 
 // Close the database connection
 $db->close();
-?>

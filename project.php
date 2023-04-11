@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task |Project Management System </title>
+  <title>Project List |Project Management System </title>
   <link rel="stylesheet" href="css/index.css">
   <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -16,7 +16,7 @@
   <section id="sidebar">
     <a href="https://acharyanischal.com.np" target="_blank" class="brand">
       <i class="bx bx-task"></i>
-      <span class="logo">Project Management System</span>
+      <span class="logo" style="text-decoration: none;">Project Management System</span>
     </a>
     <ul class="side-menu top">
       <li class="active">
@@ -32,38 +32,19 @@
         </a>
       </li>
       <li>
-        <a href="#">
-          <i class="bx bxs-doughnut-chart"></i>
-          <span class="text">Task</span>
+        <a href="project_view.php">
+          <i class="bx bxs-shopping-bag-alt"></i>
+          <span class="text">View-Projects </span>
         </a>
       </li>
-      <li>
-        <a href="#">
-          <i class="bx bxs-message-dots"></i>
-          <span class="text">Report</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bx bxs-group"></i>
-          <span class="text">Users</span>
-        </a>
-      </li>
-    </ul>
-    <ul class="side-menu">
-      <li>
-        <a href="#">
-          <i class="bx bxs-cog"></i>
-          <span class="text">Settings</span>
-        </a>
-      </li>
-      <li>
-        <a href="index.php?logout='1'" class="logout">
-          <i class="bx bxs-log-out-circle"></i>
-          <span class="text">Logout</span>
-        </a>
-      </li>
-    </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="index.php?logout='1'" class="logout">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
   </section>
 
   <section id="content">
@@ -112,37 +93,37 @@
       </div>
       <!-- project -->
       <div class="container">
-		<form method="post" action="create.php">
-			<div class="form-group">
-				<label for="project_name">Project Name:</label>
-				<input type="text" class="form-control" id="project_name" name="project_name">
-			</div>
+        <form method="post" action="create.php">
+          <div class="form-group">
+            <label for="project_name">Project Name:</label>
+            <input type="text" class="form-control" id="project_name" name="project_name">
+          </div>
 
-			<div class="form-group">
-				<label for="description">Description:</label>
-				<textarea class="form-control" id="description" name="description"></textarea>
-			</div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+          </div>
 
-			<div class="form-group">
-				<label for="start_date">Start Date:</label>
-				<input type="date" class="form-control" id="start_date" name="start_date">
-			</div>
+          <div class="form-group">
+            <label for="start_date">Start Date:</label>
+            <input type="date" class="form-control" id="start_date" name="start_date" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>">
+          </div>
 
-			<div class="form-group">
-				<label for="end_date">End Date:</label>
-				<input type="date" class="form-control" id="end_date" name="end_date">
-			</div>
+          <div class="form-group">
+            <label for="end_date">End Date:</label>
+            <input type="date" class="form-control" id="end_date" name="end_date">
+          </div>
 
-			<button type="submit" class="btn btn-primary">Submit</button>
-		</form>
-	</div>
-  <div class="text-center mt-4">
-  <a href="project_view.php" class="btn btn-primary">View Projects</a>
-</div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="text-center mt-4">
+        <a href="project_view.php" class="btn btn-primary">View Projects</a>
+      </div>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-   
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

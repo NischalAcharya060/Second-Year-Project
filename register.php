@@ -9,7 +9,7 @@
   <title>Register | Project-Management-System</title>
   <link rel="stylesheet" href="css/register.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-  
+
 </head>
 
 <body>
@@ -65,7 +65,7 @@ form.addEventListener('submit', function(e) {
   e.preventDefault();
 });
   </script> -->
- 
+
 </body>
 
 </html>

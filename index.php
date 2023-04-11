@@ -11,6 +11,29 @@ if (isset($_GET['logout'])) {
   header("location: login.php");
 }
 ?>
+<?php
+// Connect to the database
+$db = new mysqli('localhost', 'root', '', 'project_management_system');
+
+// Retrieve the project details from the database
+$query = "SELECT * FROM projects";
+$result = $db->query($query);
+
+// Check if there are any projects
+if ($result->num_rows > 0) {
+  // Loop through each project and add it to the $projects array
+  $projects = array();
+  while ($row = $result->fetch_assoc()) {
+    $projects[] = $row;
+  }
+} else {
+  // If there are no projects, set $projects to an empty array
+  $projects = array();
+}
+
+// Close the database connection
+$db->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +55,7 @@ if (isset($_GET['logout'])) {
   <!-- SIDEBAR -->
   <section id="sidebar">
     <a href="https://acharyanischal.com.np" target="_blank" class="brand">
-    <i class="bx bx-task"></i>
+      <i class="bx bx-task"></i>
       <span class="logo">Project Management System</span>
     </a>
     <ul class="side-menu top">
@@ -49,38 +72,19 @@ if (isset($_GET['logout'])) {
         </a>
       </li>
       <li>
-        <a href="#">
-          <i class="bx bxs-doughnut-chart"></i>
-          <span class="text">Task</span>
+        <a href="project_view.php">
+          <i class="bx bxs-shopping-bag-alt"></i>
+          <span class="text">View-Projects </span>
         </a>
       </li>
-      <li>
-        <a href="#">
-          <i class="bx bxs-message-dots"></i>
-          <span class="text">Report</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bx bxs-group"></i>
-          <span class="text">Users</span>
-        </a>
-      </li>
-    </ul>
-    <ul class="side-menu">
-      <li>
-        <a href="#">
-          <i class="bx bxs-cog"></i>
-          <span class="text">Settings</span>
-        </a>
-      </li>
-      <li>
-        <a href="index.php?logout='1'" class="logout">
-          <i class="bx bxs-log-out-circle"></i>
-          <span class="text">Logout</span>
-        </a>
-      </li>
-    </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="index.php?logout='1'" class="logout">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
   </section>
 
   <section id="content">
@@ -128,19 +132,33 @@ if (isset($_GET['logout'])) {
           </ul>
         </div>
       </div>
-
+      <!-- get value of users and new projects from database -->
+      <?php
+      $db = mysqli_connect('localhost', 'root', '', 'project_management_system');
+      $query = "SELECT COUNT(id) AS total_users FROM users";
+      $result = mysqli_query($db, $query);
+      $data = mysqli_fetch_assoc($result);
+      $total_users = $data['total_users'];
+      ?>
+      <?php
+      $db = mysqli_connect('localhost', 'root', '', 'project_management_system');
+      $query = "SELECT COUNT(id) AS new_projects FROM projects";
+      $result = mysqli_query($db, $query);
+      $data = mysqli_fetch_assoc($result);
+      $new_projects = $data['new_projects'];
+      ?>
       <ul class="box-info">
         <li>
           <i class="bx bxs-calendar-check"></i>
           <span class="text">
-            <h3>3</h3>
+            <h3><?php echo $new_projects; ?></h3>
             <p>New Projects</p>
           </span>
         </li>
         <li>
           <i class="bx bxs-group"></i>
           <span class="text">
-            <h3>2</h3>
+            <h3><?php echo $total_users; ?></h3>
             <p>Total Users</p>
           </span>
         </li>
@@ -160,16 +178,16 @@ if (isset($_GET['logout'])) {
             <i class="bx bx-search"></i>
             <i class="bx bx-filter"></i>
           </div>
-          <table>
-            <thead>
+          <table class="table">
+            <!-- <thead>
               <tr>
                 <th>Project Name</th>
                 <th>Start Date</th>
                 <th>End Date</th>
                 <th>Status</th>
               </tr>
-            </thead>
-            <tbody>
+            </thead> -->
+            <!-- <tbody>
               <tr>
                 <td>
                   <img src="img/user.png" />
@@ -197,8 +215,26 @@ if (isset($_GET['logout'])) {
                 <td>processing</td>
                 <td><span class="status process">Process</span></td>
               </tr>
-            </tbody>
+            </tbody> -->
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($projects as $project) : ?>
+                <tr>
+                  <td><?php echo $project['name']; ?></td>
+                  <td><?php echo $project['description']; ?></td>
+                  <td><?php echo $project['start_date']; ?></td>
+                  <td><?php echo $project['end_date']; ?></td>
           </table>
+          </tr>
+        <?php endforeach; ?>
+        </tbody>
         </div>
         <div class="todo">
           <div class="head">
@@ -229,6 +265,8 @@ if (isset($_GET['logout'])) {
     }
   </script>
   <script src="js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
